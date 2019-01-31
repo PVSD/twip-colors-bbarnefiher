@@ -27,9 +27,11 @@ public class Main {
             userConvert = stringReader.nextLine();
             conversionType = "name";
             Converter color = new Converter(userConvert, conversionType);
+
         }
         else {
             System.out.println("Sorry, but I do not know what you mean.");
         }
+
     }
 }

@@ -5,12 +5,24 @@ package com.company;
  */
 public class Converter {
     public Converter(String a, String conversionType){
-        String theColor = a;
+        int theColor = Integer.parseInt(a);
+        String theColorHex = toHex(theColor);
+
     }
-    int toHexAnswer = -1;
-    public int toHex(){
+    int[] toHexAnswerArray =new int[99];
+    String toHexAnswer = "";
+    public String toHex(int a){
+        int count = 0;
+        while(a / 16 != 0){
 
+            toHexAnswerArray[count] = a % 16;
+            a = a / 16;
+            count++;
+        }
 
+        for (int i = 0; i < toHexAnswerArray.length; i++) {
+            toHexAnswer += toHexAnswerArray[i];
+        }
         return toHexAnswer;
     }
 
