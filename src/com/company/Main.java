@@ -174,11 +174,11 @@ public class Main {
                 Converter temp = new Converter(AllColors[i].getHex(), "hexadecimal");
                 if (userConvert.equals(temp.getDec())){
                     System.out.println("Your color is one of the 140 HTML colors! It is: " + AllColors[i].getName());
+                    System.exit(0);
                 }
-                else {
-                    System.out.println("Your color is not one of the 140 HTML colors.");
-                }
+
             }
+            System.out.println("Your color is not one of the 140 HTML colors.");
 
 
         }
@@ -192,11 +192,11 @@ public class Main {
             for (int i = 0; i < AllColors.length; i++) {
                 if (userConvert.toUpperCase().equals(AllColors[i].getHex())){
                     System.out.println("Your color is one of the 140 HTML colors! It is: " + AllColors[i].getName());
+                    System.exit(0);
                 }
-                else {
-                    System.out.println("Your color is not one of the 140 HTML colors.");
-                }
+
             }
+            System.out.println("Your color is not one of the 140 HTML colors.");
 
         }
         else if (userInput.trim().equalsIgnoreCase("color")){
